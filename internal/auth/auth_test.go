@@ -9,7 +9,7 @@ import (
 
 func TestGenerateAndValidateJwt(t *testing.T) {
 	// Generate a JWT token
-	tokenString, err := GenerateJwt("test_user")
+	tokenString, err := GenerateJwt("test_user", user_id)
 	if err != nil {
 		t.Fatalf("Error generating token: %v", err)
 	}

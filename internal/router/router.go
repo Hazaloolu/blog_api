@@ -21,6 +21,8 @@ func SetupRouter() *gin.Engine {
 	{
 		authenticated.POST("/create-post", handler.CreatePost)
 		authenticated.PUT("/update-post/:id", handler.UpdatePost)
+		authenticated.GET("/get-post/:id", handler.GetPost)
+		authenticated.DELETE("/delete-post/:id", handler.DeletePost)
 	}
 
 	return r
